@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(220, 223, 223);
+}
+
+body > div {
+    margin: auto;
+}
+
+.toast {
+    display: flex;
+    background-color: #fff;
+    padding: 16px 0;
+    border-radius: 4px;
+    border-left: 5px solid;
+    box-shadow: 5px 8px 10px rgb(150, 150, 150);
+    align-items: center;
+    min-width: 400px;
+    max-width: 450px;
+    transition: linear 0.4s;
+}
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to {
+        opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+ @keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+ }
+.toast + .toast {
+    margin-top: 20px;
+}
+.toast__icon {
+    padding: 0 16px;
+    font-size: 24px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+
+}
+
+.toast__msg {
+    color: rgb(134, 135, 137);
+}
+.toast__close {
+    padding: 0 16px;
+    font-size: 20px;
+    color: rgb(134, 135, 137);
+    cursor: pointer;
+}
+
+.toast__close:hover {
+    color: #000;
+}
+
+.toast--success {
+    border-color: rgb(0, 225, 0);
+
+}
+.toast--success .toast__icon {
+    color: rgb(0, 225, 0);
+}
+.toast--warning {
+    border-color: rgb(225, 202, 0);
+}
+.toast--warning .toast__icon {
+    color: rgb(225, 202, 0);
+}
+.toast--info {
+    border-color: rgb(0, 116, 225);
+}
+.toast--info .toast__icon {
+    color: rgb(0, 116, 225);
+}
+.toast--erorr {
+    border-color: rgb(225, 0, 0);
+}
+
+.toast--erorr .toast__icon {
+    color: rgb(225, 0, 0);
+}
+
+#toast {
+    position: fixed ;
+    top : 32px;
+    right: 32px;
+}
+
+/* ================ button================= */
+.btn {
+    color: #fff;
+    padding: 12px 12px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: gray;
+}
+.btn--success {
+    background-color: rgb(0, 225, 0);
+}
+.btn--warning {
+    background-color: rgb(225, 202, 0);
+
+}
+.btn--info {
+    background-color: rgb(0, 116, 225);
+
+}
+.btn--erorr {
+    background-color: rgb(225, 0, 0);
+
+}
